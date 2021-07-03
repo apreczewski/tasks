@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Modal from 'react-modal';
 import { scrollbar } from '../../../styles/scrollbar';
 
-
 export const Wrapper = styled(Modal)`
   position: fixed;
   top: 0;
