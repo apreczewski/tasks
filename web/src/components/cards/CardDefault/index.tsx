@@ -7,7 +7,8 @@ import {
   Wrapper, Header, Body, Footer
 } from './styles';
 
-interface ICard {
+export interface ICard {
+  id?: string;
   title: string,
   text: string,
   created: string
