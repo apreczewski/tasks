@@ -11,7 +11,9 @@ export interface ICard {
   id?: string;
   title: string,
   text: string,
-  created: string
+  status: string,
+  created: string,
+  changeStatus?: () => {},
 }
 
 export const CardDefault: React.FC<ICard> = ({ title, text, created }) => {

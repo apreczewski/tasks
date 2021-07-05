@@ -27,10 +27,9 @@ import {
   BntClose
 } from './styles';
 
-
-
 export const Home: React.FC = () => {
   const [cards, setCards] = useState<ICard[]>([])
+  // const [statusSelected, setStatusSelected] = useState('todo')
   const [isOpenModal, setIsOpenModal] = useState(false)
 
   const formRef = useRef(null);
@@ -45,11 +44,31 @@ export const Home: React.FC = () => {
 
   const handleAddNewCard = useCallback((card) => {
     if (card) {
-      setCards([...cards, { ...card, id: uuid(), created: `Created ${moment(new Date()).format('MMMM DD, YYYY HH:mma')}` }])
+      setCards([...cards, { ...card, id: uuid(), status: 'todo', created: `Created ${moment(new Date()).format('MMMM DD, YYYY HH:mma')}` }])
       handleOpenModal(false);
     }
 
   }, [cards, handleOpenModal])
+
+  // const handleChangeStatusCard = useCallback((id, newStatus) => {
+  //   if (id && newStatus) {
+  //     const newCard = cards.map((card) => {
+  //       if (card.id === id) {
+  //         return { ...card, status: newStatus }
+  //       }
+  //       return card;
+  //     })
+  //     setCards(newCard)
+  //     handleOpenModal(false);
+  //   }
+
+  // }, [cards, handleOpenModal])
+
+  // const handleStatusSelect = useCallback((status) => {
+  //   if (status) {
+  //     setStatusSelected(status)
+  //   }
+  // }, [])
 
   return (
     <Wrapper>
@@ -68,7 +87,17 @@ export const Home: React.FC = () => {
         </Anchor>
 
         {cards && cards.map((card) => {
-          return <CardDefault key={uuid()} title={card.title} text={card.text} created={card.created} />
+          // if (card.status === statusSelected) {
+          return (
+            <CardDefault
+              key={card.id}
+              title={card.title}
+              text={card.text}
+              status={card.status}
+              created={card.created}
+            />
+          )
+          // }
         })}
 
         {!cards.length && (
@@ -79,7 +108,6 @@ export const Home: React.FC = () => {
           <ModalDefault
             isOpen={isOpenModal}
             handleClose={() => handleOpenModal(!isOpenModal)}
-
           >
             <ContentModal>
               <span>New Task</span>

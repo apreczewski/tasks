@@ -33,7 +33,7 @@ export const scrollbarThin = css`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: ${shade(0.3, colors.shark)};
+    background: ${shade(0.3, colors.lavender)};
     border-radius: 9px;
   }
 

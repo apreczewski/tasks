@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 
 export const Body = styled.div`
   height: calc(100vh - 10.25rem);
+  padding: 0 5px 0 0;
 
   overflow-y: auto;
   ${scrollbarThin}
@@ -66,6 +67,10 @@ export const ContentModal = styled.div`
   > span {
     font-size: 31.47px;
     font-weight: 600;
+  }
+
+  @media (max-width: 700px) {
+    margin: 0 15px;
   }
 
   @media (max-width: 1600px) {
