@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Getting Started
 
 ### `yarn run`
 
 This project was bootstrapped with yarn.
 
-# Available Scripts
+#
 
 In the project directory, you can run:
 
