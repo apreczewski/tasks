@@ -21,8 +21,8 @@ You will also see any lint errors in the console.
 The first page.
 ![Optional Text](./src/assets/readme/screen00.png)
 
-Create card.
+Create task.
 ![Optional Text](./src/assets/readme/screen01.png)
 
-List of cards.
+List of tasks.
 ![Optional Text](./src/assets/readme/screen02.png)
