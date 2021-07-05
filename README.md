@@ -19,10 +19,10 @@ You will also see any lint errors in the console.
 ### `Home page`
 
 The first page.
-![Optional Text](../src/assets/readme/screen00.png)
+![Optional Text](./src/assets/readme/screen00.png)
 
 Create card.
-![Optional Text](../src/assets/readme/screen01.png)
+![Optional Text](./src/assets/readme/screen01.png)
 
 List of cards.
-![Optional Text](../src/assets/readme/screen02.png)
+![Optional Text](./src/assets/readme/screen02.png)
